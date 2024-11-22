@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" style="padding:0px; margin:0px;">
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet"> 
+        <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Health</title>
+      
+     <style>
+       body {
+    background-color: rgb(180,180,180);
+    justify-content: center;
+    align-items: center
+}
+.box{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+  color: white;
+}
+.heads{
+  font-family: 'Merriweather', serif;
+  font-size : 30px;
+}
+      </style>
+
+</head>
+<body data-sidebar="light" data-keep-enlarged="false" class="vertical-collpsed bg-white" style="margin:0px; ">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+    <a class="navbar-brand px-3" href="#">Health</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style="display:flex;justify-content: space-between;">
+      <div>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="dash.php">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="hospital.html">Hospitals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bloodbank.html">Blood Bank</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="wellness.html">Wellness Centers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="schemes_index.php">Schemes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="ayurveda.html">Ayurveda</a>
+        </li> 
+      </ul>
+    </div>
+    <div style="display:flex;justify-content:space between;">
+    <div class="bg-light" style="margin-right:10px">
+      <!-- <li class="nav-item"> -->
+          <a class="nav-link" href="patient_history.php?a=<?php echo $aadhar?>">View History</a>
+      <!-- </li> -->
+    </div>
+      <div class="bg-light">
+        <!-- <li class="nav-item"> -->
+            <a class="nav-link" href="index.html">Log Out</a>
+        <!-- </li> -->
+      </div>
+  </div>
+    </div>
+  </nav>
+
+    <div class="container-fluid" style="background-color: LightYellow;">
+          <div class="row">
+            <div class="col-12" style="padding:0px;">
+
+              
+
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+        
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox" style="padding:3%;margin-top: 2%;">
+        
+              <!--First slide-->
+              <div class="carousel-item active">
+        
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://media.istockphoto.com/photos/modern-hospital-building-picture-id1312706504?b=1&k=20&m=1312706504&s=170667a&w=0&h=IcYI9Pm-s-JyeCOgul1DfSQAqY3hVte4uXnStOXbkaw="
+                           alt="Card image cap" height="300px">
+                    </div>
+                  </div>
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9zcGl0YWxzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                           alt="Card image cap" height="300px">
+                    </div>
+                  </div>
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://media.istockphoto.com/photos/team-of-doctors-and-nurses-in-hospital-picture-id1307543618?b=1&k=20&m=1307543618&s=170667a&w=0&h=hXpYmNYXnhdD36C-8taPQvdpM9Oj-woEdge8nvPrsZY="
+                           alt="Card image cap" height="300px">
+                    </div>
+                  </div>
+                </div>
+        
+              </div>
+              <!--/.First slide-->
+        
+              <!--Second slide-->
+              <div class="carousel-item">
+        
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://media.istockphoto.com/photos/healthcare-workers-portrait-picture-id1284636209?b=1&k=20&m=1284636209&s=170667a&w=0&h=j_vm0DELoS5ZhzbqYAI60nHoO57jHlrGIyLgqBs6Wyg="
+                           alt="Card image cap" height="300px">
+                    </div>
+                  </div>
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://media.istockphoto.com/photos/modern-empty-temporary-intensive-care-emergency-room-is-ready-to-picture-id1295301481?b=1&k=20&m=1295301481&s=170667a&w=0&h=2W-5mbvRju-L4DE-fzGlhHRWhX5fS72MjUcVwj0_jvg="
+                           alt="Card image cap" height="300px">
+                    </div>
+                  </div>
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://media.istockphoto.com/photos/ambulances-picture-id168448137?b=1&k=20&m=168448137&s=170667a&w=0&h=6sH0fyMF7BnRV3Bfh1iQbkNzhd3pDRCsteny1INWQr0="
+                           alt="Card image cap" height="300px">
+                    </div>
+                  </div>
+                </div>
+        
+              </div>
+              <!--/.Second slide-->
+        
+              <!--Third slide-->
+              <div class="carousel-item">
+        
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://media.istockphoto.com/photos/mature-doctor-and-nurse-discussing-patient-case-picture-id1307543555?b=1&k=20&m=1307543555&s=170667a&w=0&h=KKk1RkwzUkT_a6Kqf0jh7aBEVpIMG048FALjEAPyDp0="
+                           alt="Card image cap" height="300px">
+                    </div>
+                  </div>
+        
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://media.istockphoto.com/photos/modern-hospital-building-picture-id1312706413?b=1&k=20&m=1312706413&s=170667a&w=0&h=VRi3w2E1UqvCCcK-nDV6mH7FhDZoTU9MM2QKSom96X4="
+                           alt="Card image cap" height="300px">
+                    </div>
+                  </div>
+        
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="https://media.istockphoto.com/photos/vigilantly-monitoring-his-patients-vitals-picture-id592647720?b=1&k=20&m=592647720&s=170667a&w=0&h=QrmU3JvrT95eD8TS1xEJY6e2OloGEfshU-5KqPgchcQ="
+                           alt="Card image cap" height="300px">
+                    </div>
+                  </div>
+                </div>
+        
+              </div>
+              <!--/.Third slide-->
+            </div>
+            <!--/.Slides-->
+            </div>
+            
+            <div class="row mt-2">
+              <div class="col-4"></div>
+              <div class="col-4">
+                      <div class="input-group">
+                        <div class="form-outline" style="display: flex;flex-direction: column; color: black;"> 
+                          <div style="margin-top: 5%;">
+                            <h3>Find the nearest hospital around you</h3>
+                          </div>
+                          <div style="display: flex;">
+                            <input type="search" style="width: 400px;" id="form1" class="form-control" placeholder="Search by PINCODE">
+                            <button type="button" class="btn btn-primary" onclick="onSearch()">
+                              <i class="fas fa-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="col-4"></div>
+          
+          </div>
+          
+          <!--
+            <div class="row mt-4" >
+              <div class="col-3">
+                </div>
+              <div class="col-6 ">
+                <div class="row " style="display:flex; justify-content:center;">
+                  <div class="col-6">
+                    <div class="heads" style="color:white">
+                      Nearest Hospitals
+                      </div>
+                      </div>
+                      <div class="col-6">
+                    <div class="input-group">
+                      <div class="form-outline">
+                        <input type="search" id="form1" class="form-control" placeholder="Search by PINCODE">
+                      </div>
+                      <button type="button" class="btn btn-primary" onclick="onSearch()">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+              </div>
+            </div>-->
+            <div class="row mt-5">
+              <div class="col-2">
+                </div>
+              <div class="col-8 p-4 mb-4" id="tbl-col" style="margin-bottom:140px;background-color:white;visibility:hidden; border:2px grey solid;">
+                <table class="table" id="myTable" >
+                  <thead>
+                    <tr>
+                      <th scope="col">Sl No.</th>
+                      <th scope="col">City</th>
+                      <th scope="col">Hospital</th>
+                      <th scope="col">Contact Number</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-2">
+                </div>
+            </div>
+
+            <footer class="bg-dark text-center text-white">
+              <!-- Grid container -->
+              <div class="container p-2 pb-0">
+                <!-- Section: Social media -->
+                <section class="mb-2">
+                  <!-- Github -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Karthikkadivela/" role="button"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <!-- Linkedin -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/karthik-k-n-57a3151b5/" role="button"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <!-- Instagram -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/karthikkn_2508/" role="button"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <!-- Google -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com" role="button"
+                    ><i class="fab fa-google"></i
+                  ></a>
+                  <!-- Facebook -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+            
+                  <!-- Twitter -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </section>
+                <!-- Section: Social media -->
+              </div>
+              <!-- Grid container -->
+            
+              <!-- Copyright -->
+              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2021 Copyright:
+                <a class="text-white" href="#">HealthCare.com</a>
+              </div>
+              <!-- Copyright -->
+            </footer>
+
+            </div>
+          </div>
+          
+        </div>  <!-- end container-fluid-->
+    
+    
+    <script>
+
+  
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+<script>
+  var i = 0;
+  var tbll;
+function onSearch(){
+  let searchinput=document.getElementById("form1").value;
+  let tbl=document.getElementById("tbl-col");
+  tbl.style.visibility = "visible";
+  
+  if(i==1){
+    tbll.destroy();
+  }
+  $.ajax({
+    "url": "https://api.data.gov.in/resource/0dfebd78-bac4-44be-9291-025a983323f4?api-key=579b464db66ec23bdd00000188796cc0e4534c876707dfda18d61829&format=json&offset=0&limit=50&filters[pincode]="+searchinput,
+    "success": function (data) {
+      console.log(data);
+      // data = JSON.parse(data);  // Parse the JSON string
+      i=1;
+      tbll=$('#myTable').DataTable({
+        data: data.records,  // Get the data object
+        columns: [
+          { "data": "srno" },
+          { "data": "district_name",},
+          { "data": "health_facility_name",
+            "render": function (data, type, row) {
+              let a = "<a  href='display_hospital.php?srno="+row.srno+"'>"+data+"</a>";
+              return a;
+            }
+        },
+          { "data": "landline_number" }
+        ],
+        columnDefs: [{targets: [0, 1, 2, 3],
+                    render: function ( data, type, row ) {
+                      var color = 'black';
+                      return '<tr style="background-color:' + color + '">' + data + '</tr>';
+                    }
+               }]
+      });
+    }
+  });
+}
+</script>
+
+  </body>
+</html>

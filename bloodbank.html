@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="bloodbank.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank page</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+      <a class="navbar-brand px-3" href="#">Health</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" style="display:flex;justify-content: space-between;">
+        <div>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="dash.php">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hospital.html">Hospitals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bloodbank.html">Blood Bank</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wellness.html">Wellness Centers</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="schemes_index.php">Schemes</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="ayurveda.html">Ayurveda</a>
+          </li> 
+        </ul>
+      </div>
+      <div style="display:flex;justify-content:space between;">
+      <div class="bg-light" style="margin-right:10px">
+        <!-- <li class="nav-item"> -->
+            <a class="nav-link" href="patient_history.php?a=<?php echo $aadhar?>">View History</a>
+        <!-- </li> -->
+      </div>
+        <div class="bg-light">
+          <!-- <li class="nav-item"> -->
+              <a class="nav-link" href="index.html">Log Out</a>
+          <!-- </li> -->
+        </div>
+    </div>
+      </div>
+    </nav>
+
+    
+    
+
+    <!-- Carousel -->
+
+    <div id="carouselExampleIndicators" class="carousel slide" style="background-color: gainsboro;" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox" style="padding:3%;">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://media.istockphoto.com/photos/donate-blood-written-on-a-sandwich-board-sign-picture-id1150277164?k=20&m=1150277164&s=612x612&w=0&h=pm-ro-8TWZBeKG9WG9ozCk4tuczr0uLosR_BfUR5uzQ="
+                 alt="Card image cap" height="300px">
+          </div>
+        </div>
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://media.istockphoto.com/photos/young-women-is-going-to-donate-blood-in-blood-bank-picture-id495841028?b=1&k=20&m=495841028&s=170667a&w=0&h=mVZ-XT55LhKL21zCWmsmKYUpbFHpgFxJBQTmvdcywn8="
+                 alt="Card image cap" height="300px">
+          </div>
+        </div>
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://media.istockphoto.com/photos/blood-transfusion-picture-id478019921?k=20&m=478019921&s=612x612&w=0&h=-R4nsC1KBqUMyDlLWvFAPS00chy04FO8Ov4aWnC2poY="
+                 alt="Card image cap" height="300px">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://media.istockphoto.com/photos/patient-receiving-a-blood-transfusion-picture-id1266746953?b=1&k=20&m=1266746953&s=170667a&w=0&h=CsgK61GmnZ-_c-1nIyt7hEjtfpcAp0tdypPbhMSH_3I="
+                 alt="Card image cap" height="300px">
+          </div>
+        </div>
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://media.istockphoto.com/photos/blood-samples-picture-id171367478?b=1&k=20&m=171367478&s=170667a&w=0&h=mGzJNgsWIItXELycWkx0YUCMkosTTxGrMDDL_st-u1E="
+                 alt="Card image cap" height="300px">
+          </div>
+        </div>
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://www.lstream.org/wp-content/uploads/Facts-Stats-Halfsheet-1-548x768.png"
+                 alt="Card image cap" height="300px">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.Second slide-->
+
+    <!--Third slide-->
+    <div class="carousel-item">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://media.istockphoto.com/photos/blood-donation-concept-picture-id171149326?b=1&k=20&m=171149326&s=170667a&w=0&h=g8MKBBur6WY7u575tXU_YTedfsSB0NIHGs_ZusI_qbY="
+                 alt="Card image cap" height="300px">
+          </div>
+        </div>
+
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://media.istockphoto.com/photos/hands-holding-red-heart-health-care-love-organ-donation-mindfulness-picture-id1267045601?b=1&k=20&m=1267045601&s=170667a&w=0&h=vNdrJAUxqCwbj0seVCpvldL5essIcAmIthll11BJTlA="
+                 alt="Card image cap" height="300px">
+          </div>
+        </div>
+
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card mb-2">
+            <img class="card-img-top" src="https://media.istockphoto.com/photos/an-africanamerican-young-man-donating-blood-in-the-hospital-picture-id1308479819?b=1&k=20&m=1308479819&s=170667a&w=0&h=rMSyCyXVzjNSbhnEOta5yY9lcLRaJsivOH2bjIsuqts="
+                 alt="Card image cap" height="300px">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.Third slide-->
+  </div>
+  <!--/.Slides-->
+</div>
+
+
+      <!-- Cards -->
+      <section>
+      <div class="card-background">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="text-center col-sm-10 col-sm-offset-1">
+                <div class="col-md-12">
+                        <h1>Why donate blood?</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-2 col-sm-4 col-xs-6 col-lg-4">
+                <div class="outer-card">
+                <div class="indv-card">
+                <i class="fa fa-tint" aria-hidden="true"></i>&nbsp;
+               <h5> Blood is needed every two seconds.Be a Hero. Give Blood.</h5>
+              </div>
+              </div>
+            </div>
+              <div class="col-md-2 col-sm-4 col-xs-6 col-lg-4">
+                <div class="indv-card">
+                <i class="fa fa-tint" aria-hidden="true"></i>&nbsp;
+               <h5> About one in seven people entering a hospital needs blood</h5>
+              </div>
+              </div>
+              <div class="col-md-2 col-sm-4 col-xs-6 col-lg-4">
+                <div class="indv-card">
+                <i class="fa fa-tint" aria-hidden="true"></i>&nbsp;
+               <h5> Only 37 percent of our country's population is eligible to give blood</h5>
+              </div>
+              </div>
+              <div class="col-md-2 col-sm-4 col-xs-6 col-lg-4">
+                <div class="indv-card">
+                <i class="fa fa-tint" aria-hidden="true"></i>&nbsp;
+               <h5> less than 10 percent of those who can donate actually do donate annually.</h5>
+              </div>
+              </div>
+              <div class="col-md-2 col-sm-4 col-xs-6 col-lg-4">
+                <div class="indv-card">
+                <i class="fa fa-tint" aria-hidden="true"></i>&nbsp;
+               <h5>Our blood supply comes from caring donors like you</h5>
+              </div>
+              </div>
+              <div class="col-md-2 col-sm-4 col-xs-6 col-lg-4">
+                <div class="indv-card">
+                <i class="fa fa-tint" aria-hidden="true"></i>&nbsp;
+               <h5> it gives someone another smile, another hug, another chance</h5>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+      <!-- Services -->
+
+    <section>
+        <br><br>
+        <div class="container">
+        <div class="row">
+            <div class="text-center col-sm-10 col-sm-offset-1">
+                <div class="col-md-12">
+                        <h1>Services</h1>
+                </div>
+            <p>These are some of the services available here</p>
+            </div>
+        </div>
+
+       <div>
+          <div class="row">
+            
+                <div class="col-sm-3">
+                    <div>
+                    <h3>Blood Availability</h3>
+                    <div>
+                    <div>
+                    <i class="fa fa-tint"></i>
+                    </div>                        
+                    </div>
+                    
+                    <p>Get status of available blood stock in blood banks</p>
+                    <a  href="bloodbanks.html" type="button" class="btn btn-primary">Check Blood Availability</a>
+                    </div>
+                </div>
+            
+                <div class="col-sm-3">
+                    <div>
+                    <h3>Camp Schedule</h3>
+                    <div>
+                    <div>
+                        <i class="fa fa-clock-o"></i>
+                    </div>                        
+                    </div>
+                    
+                    <p>View and register for Blood Donation camps </p>
+                    <a  href="bloodbank_donor_register.html" type="button" class="btn btn-primary">Register Now</a>
+                    </div>
+                </div>
+            
+                <div class="col-sm-3">
+                    <div>
+                    <h3>Nearby Blood Banks</h3>
+                    <div>
+                    <div>
+                    <i class="fa fa-map-marker "></i>
+                    </div>                       
+                    </div>
+                    
+                    <p>
+                    Get contact and navigation details of blood banks
+                    </p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=bloodbanks+near+me" class=" btn  btn-primary">Nearby Blood Banks</a>
+                    </div>
+                </div>
+            
+                <div class="col-sm-3">
+                    <div>
+                    <h3>My Donations</h3>
+                    <div>
+                        <div>
+                    <i class="fa fa-user"></i>
+                    </div>                  
+                    </div>
+                    
+                    <p> Register, track and maintain your profile
+                    </p>
+                    <button  class=" btn btn-primary">Start Now</button>
+                    </div>
+                </div>
+
+          </div>
+        </div>
+
+        </div>
+    <br><br>
+    </section>
+
+    <!-- Statistics -->
+    <section>
+        <br><br>
+        <div class="card-background">
+        <div class="container-fluid">
+
+          <div class="row">
+              <div class="text-center col-sm-10 col-sm-offset-1">
+              <div class="col-md-12">
+                      <h1>Statistics</h1>
+                  </div>
+              <p>These are some of the statistics related to blood donations and blood banks</p>
+              </div>
+          </div>
+
+          <div class="stats-image">
+            <div>
+              <img src="https://factly.in/wp-content/uploads/2018/03/Blood-Banks-by-state-March-2018.png" alt="stats"/>
+            </div>
+            <div>
+              <img src="https://www.gjtmonline.com/articles/2018/3/1/images/GlobJTransfusMed_2018_3_1_46_229321_i6.jpg" alt="stats"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Compatible blood types -->
+    <section>
+      <br><br>
+    <div class="container-fluid" style=" padding: 0 2rem;">
+
+      <div class="row">
+          <div class="text-center col-sm-10 col-sm-offset-1">
+          <div class="col-md-12">
+                  <h1>Blood Compatibility</h1>
+              </div>
+          <p>So how many blood types are you compatible with?</p>
+          </div>
+      </div>
+
+    <table class="table table-striped" >
+      <thead>
+        <tr>
+          <th scope="col">Blood Type</th>
+          <th scope="col">Donate Blood to</th>
+          <th scope="col">Recieve Blood from</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">A+</th>
+          <td>A+ AB+</td>
+          <td>A+ A- O+ O-</td>
+        </tr>
+        <tr>
+          <th scope="row">O+</th>
+          <td>O+ A+ B+ AB+</td>
+          <td>O+ O-</td>
+        </tr>
+        <tr>
+          <th scope="row">B+</th>
+          <td >B+ AB+</td>
+          <td>	B+ B- O+ O-</td>
+        </tr>
+        <tr>
+          <th scope="row">AB+</th>
+          <td >AB+</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <th scope="row">B+</th>
+          <td >B+ AB+</td>
+          <td>	B+ B- O+ O-</td>
+        </tr>
+        <tr>
+          <th scope="row">A-</th>
+          <td >A+ A- AB+ AB-</td>
+          <td>A- O-</td>
+        </tr>
+        <tr>
+          <th scope="row">O-</th>
+          <td >Everyone</td>
+          <td> O-</td>
+        </tr>
+        <tr>
+          <th scope="row">B-</th>
+          <td >B+ B- AB+ AB-</td>
+          <td>B- O-</td>
+        </tr>
+        <tr>
+          <th scope="row">AB-</th>
+          <td >	AB+ AB-</td>
+          <td>AB- A- B- O-</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-2 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-2">
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Karthikkadivela/" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/karthik-k-n-57a3151b5/" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/karthikkn_2508/" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com" role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-white" href="#">HealthCare.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
